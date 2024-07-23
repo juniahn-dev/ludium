@@ -1,0 +1,27 @@
+{
+  "name": "shared",
+  "license": "UNLICENSED",
+  "description": "Shared package for Ludium",
+  "version": "1.0.0",
+  "private": true,
+  "source": "src/index.ts",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "exports": {
+    ".": "./lib"
+  },
+  "scripts": {
+    "prebuild": "rm -rf ./lib",
+    "build": "npx tsc -p ./tsconfig.json"
+  },
+  "dependencies": {
+    "ramda": "^0.29.0",
+    "rimraf": "^4.4.1",
+    "typescript": "5.0.2"
+  },
+  "devDependencies": {
+    "@types/ramda": "^0.29.2",
+    "eslint": "8.36.0",
+    "eslint-config-next": "13.2.4"
+  }
+}

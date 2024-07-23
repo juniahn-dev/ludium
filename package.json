@@ -5,15 +5,18 @@
   "license": "MIT",
   "workspaces": {
     "packages": [
+      "packages/shared",
       "packages/backend",
       "packages/frontend"
     ]
   },
   "scripts": {
-    "start:backend": "npm --workspace packages/backend run start:dev",
-    "start:frontend": "npm --workspace packages/frontend run dev",
-    "backend:dev": "yarn workspace backend run dev",
-    "frontend:dev": "yarn workspace frontend run dev"
+    "dev:backend": "yarn workspace backend run dev",
+    "dev:frontend": "yarn workspace frontend run dev",
+    "build:shared": "yarn workspace shared run build",
+    "build:backend": "yarn workspace api run build",
+    "build:frontend": "yarn workspace management run build",
+    "build": "yarn build:shared && yarn build:backend && yarn build:frontend"
   },
   "devDependencies": {
     "typescript": ">=3.0.0"

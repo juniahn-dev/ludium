@@ -1,0 +1,11 @@
+export enum ModuleTypes {
+  NONE = 'NONE',
+  LCD = 'LCD',
+  RPC = 'RPC',
+  HISTORICAL = 'HISTORICAL',
+  CUSTOM = 'CUSTOM',
+  TX_BUILDER = 'TX_BUILDER',
+  METRIC = 'METRIC',
+  STATISTICS = 'STATISTICS',
+  SEARCH = 'SEARCH',
+}
